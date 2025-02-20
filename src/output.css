@@ -1614,17 +1614,11 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-blue-500 {
-    background-color: var(--color-blue-500);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
   .bg-gray-500 {
     background-color: var(--color-gray-500);
-  }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
   }
   .bg-red-500 {
     background-color: var(--color-red-500);
@@ -1650,18 +1644,6 @@
   .bg-\[url\(\'bg\.jpg\'\)\] {
     background-image: url('bg.jpg');
   }
-  .bg-\[url\(\'fo\'\)\] {
-    background-image: url('fo');
-  }
-  .bg-\[url\(\'foto\'\)\] {
-    background-image: url('foto');
-  }
-  .bg-\[url\(\'foto\.jpg\'\)\] {
-    background-image: url('foto.jpg');
-  }
-  .bg-\[url\(\'foto1\'\)\] {
-    background-image: url('foto1');
-  }
   .bg-\[url\(\'foto1\.jpg\'\)\] {
     background-image: url('foto1.jpg');
   }
@@ -1670,12 +1652,6 @@
   }
   .bg-\[url\(\/src\/bg\.jpg\)\] {
     background-image: url(/src/bg.jpg);
-  }
-  .bg-\[url\(\/src\/foto1\.jpg\)\] {
-    background-image: url(/src/foto1.jpg);
-  }
-  .bg-\[url\(src\/bg\.jpg\)\] {
-    background-image: url(src/bg.jpg);
   }
   .bg-none {
     background-image: none;
@@ -2669,13 +2645,13 @@
 }
 @keyframes changeBackground {
   0% {
-    background-image: url('/src/foto1.jpg');
+    background-image: url('/foto1.jpg');
   }
   50% {
-    background-image: url('/src/foto2.jpg');
+    background-image: url('/foto2.jpg');
   }
   100% {
-    background-image: url('/src/foto3.jpg');
+    background-image: url('/foto3.jpg');
   }
 }
 .animate-bg {
