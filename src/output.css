@@ -524,92 +524,98 @@
   }
 }
 @layer utilities {
-  .w-1 {
-    width: calc(var(--spacing) * 1);
+  .\@container {
+    container-type: inline-size;
   }
-}
-@keyframes changeBackground {
-  0% {
-    background-image: url('foto1.jpg');
+  .\@container-\[inline-size\] {
+    container-type: inline-size;
   }
-  30% {
-    background-image: url('foto2.jpg');
+  .pointer-events-auto {
+    pointer-events: auto;
   }
-  70% {
-    background-image: url('foto3.jpg');
+  .pointer-events-none {
+    pointer-events: none;
   }
-  100% {
-    background-image: url('foto1.jpg');
+  .collapse {
+    visibility: collapse;
   }
-}
-.animate-bg {
-  animation: changeBackground 10s infinite;
-  background-size: cover;
-  background-position: center;
-  transition: opacity 1s ease-in-out;
-}
-.poppins-regular {
-  font-family: "Poppins", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.merriweather-bold {
-  font-family: "Merriweather", serif;
-  font-style: normal;
-}
-@keyframes slideUp {
-  from {
-    transform: translateY(0);
-    opacity: 1;
+  .invisible {
+    visibility: hidden;
   }
-  to {
-    transform: translateY(-100%);
-    opacity: 0;
+  .visible {
+    visibility: visible;
   }
-}
-.animate-slide-up {
-  animation: slideUp 0.5s ease-out forwards;
-}
-.animate-slide-up2 {
-  animation: slide-up2 1s ease-out forwards;
-}
-@keyframes slide-up2 {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+  .not-sr-only {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
   }
-}
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
+  .absolute {
+    position: absolute;
   }
-}
-@keyframes ping {
-  75%, 100% {
-    transform: scale(2);
-    opacity: 0;
+  .fixed {
+    position: fixed;
   }
-}
-@keyframes pulse {
-  50% {
-    opacity: 0.5;
+  .relative {
+    position: relative;
   }
-}
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-25%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  .static {
+    position: static;
   }
-  50% {
-    transform: none;
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  .sticky {
+    position: sticky;
   }
-}
-lumn: auto;
+  .end-1 {
+    inset-inline-end: calc(var(--spacing) * 1);
+  }
+  .end-2 {
+    inset-inline-end: calc(var(--spacing) * 2);
+  }
+  .top-0 {
+    top: calc(var(--spacing) * 0);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .isolate {
+    isolation: isolate;
+  }
+  .isolation-auto {
+    isolation: auto;
+  }
+  .z-99999999 {
+    z-index: 99999999;
+  }
+  .z-auto {
+    z-index: auto;
+  }
+  .order-first {
+    order: -9999;
+  }
+  .order-last {
+    order: 9999;
+  }
+  .order-none {
+    order: 0;
+  }
+  .col-auto {
+    grid-column: auto;
   }
   .col-span-full {
     grid-column: 1 / -1;
@@ -2165,6 +2171,9 @@ lumn: auto;
   .scheme-only-light {
     color-scheme: only light;
   }
+  .opacity-100 {
+    opacity: 100%;
+  }
   .mix-blend-plus-darker {
     mix-blend-mode: plus-darker;
   }
@@ -2305,6 +2314,10 @@ lumn: auto;
   }
   .transition-normal {
     transition-behavior: normal;
+  }
+  .duration-1000 {
+    --tw-duration: 1000ms;
+    transition-duration: 1000ms;
   }
   .ease-in {
     --tw-ease: var(--ease-in);
@@ -2653,26 +2666,22 @@ lumn: auto;
 @keyframes changeBackground {
   0% {
     background-image: url('foto1.jpg');
-    opacity: 1;
   }
   30% {
     background-image: url('foto2.jpg');
-    opacity: 1;
   }
   70% {
     background-image: url('foto3.jpg');
-    opacity: 1;
   }
   100% {
     background-image: url('foto1.jpg');
-    opacity: 1;
   }
 }
 .animate-bg {
-  animation: changeBackground 15s infinite;
+  animation: changeBackground 10s infinite;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 .poppins-regular {
   font-family: "Poppins", serif;
@@ -2996,6 +3005,10 @@ lumn: auto;
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -3013,10 +3026,6 @@ lumn: auto;
   inherits: false;
 }
 @property --tw-contain-style {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
