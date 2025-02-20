@@ -7,29 +7,30 @@
 @keyframes changeBackground {
   0% {
     background-image: url('foto1.jpg');
-    opacity: 1;
+    
   }
   30% {
     background-image: url('foto2.jpg');
-    opacity: 1;
+    
   }
 
   70%{
     background-image: url('foto3.jpg');
-    opacity: 1;
+    
   }
+
 
   100% {
     background-image: url('foto1.jpg');
-    opacity: 1;
+    
   }
 }
 
 .animate-bg {
-  animation: changeImage 10s infinite;
+  animation: changeBackground 20s infinite;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 
