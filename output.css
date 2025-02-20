@@ -899,6 +899,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
+  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -2636,13 +2639,13 @@
 }
 @keyframes changeBackground {
   0% {
-    background-image: url('/src/foto1.jpg');
+    background-image: url('/foto1.jpg');
   }
   50% {
-    background-image: url('/src/foto2.jpg');
+    background-image: url('/foto2.jpg');
   }
   100% {
-    background-image: url('/src/foto3.jpg');
+    background-image: url('/foto3.jpg');
   }
 }
 .animate-bg {
@@ -2669,19 +2672,6 @@
 }
 .animate-slide-up {
   animation: slideUp 0.5s ease-out forwards;
-}
-.animate-slide-up2 {
-  animation: slide-up2 1s ease-out forwards;
-}
-@keyframes slide-up2 {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }
 @keyframes spin {
   to {
