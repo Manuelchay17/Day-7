@@ -1617,9 +1617,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
-  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
@@ -2479,11 +2476,6 @@
   .target\:absolute {
     &:target {
       position: absolute;
-    }
-  }
-  .target\:fixed {
-    &:target {
-      position: fixed;
     }
   }
   .target\:z-0 {
