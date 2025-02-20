@@ -899,9 +899,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -2645,13 +2642,13 @@
 }
 @keyframes changeBackground {
   0% {
-    background-image: url('/foto1.jpg');
+    background-image: url('foto1.jpg');
   }
   50% {
-    background-image: url('/foto2.jpg');
+    background-image: url('foto2.jpg');
   }
   100% {
-    background-image: url('/foto3.jpg');
+    background-image: url('foto3.jpg');
   }
 }
 .animate-bg {
