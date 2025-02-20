@@ -902,9 +902,6 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
   }
@@ -1616,9 +1613,6 @@
   }
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
-  }
-  .bg-amber-200 {
-    background-color: var(--color-amber-200);
   }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
@@ -2479,11 +2473,6 @@
   .target\:absolute {
     &:target {
       position: absolute;
-    }
-  }
-  .target\:fixed {
-    &:target {
-      position: fixed;
     }
   }
   .target\:z-0 {
