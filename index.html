@@ -131,9 +131,9 @@
 
   <!-- cerita perjalanan -->
   <div class="">
-    <p class="font-paris text-3xl md:text-6xl text-center py-4 animate-slide-up-on-scroll">Our Stories</p>
+    <p class="font-paris text-3xl md:text-6xl text-center py-4 animate-slide-up2-on-scroll">Our Stories</p>
     <div class="px-4">
-        <div class=" md:flex md:gap-3 md:m-4 animate-slide-up-on-scroll md:mb-7">
+        <div class=" md:flex md:gap-3 md:m-4 animate-slide-up2-on-scroll md:mb-7">
             <img class="w-120 h-70 object-cover rounded-3xl md:h-96" src="g4.jpg" alt="">
             <div class="md:ml-10 md:max-w-[500px]">
                 <p class="First Meet text-3xl my-3 md:text-4xl">First Meet</p>
@@ -141,7 +141,7 @@
             </div>
         </div>
         
-        <div class=" md:flex gap-3 md:m-4 animate-slide-up-on-scroll md:mb-7">
+        <div class=" md:flex gap-3 md:m-4 animate-slide-up2-on-scroll md:mb-7">
             <img class="w-120 h-70 object-cover rounded-3xl md:h-96" src="g4.jpg" alt="">
             <div class="md:ml-10 md:max-w-[500px]">
                 <p class="First Meet text-3xl my-3 md:text-4xl">Relationship</p>
@@ -149,7 +149,7 @@
             </div>
         </div>
 
-        <div class=" md:flex gap-3 md:m-4 animate-slide-up-on-scroll">
+        <div class=" md:flex gap-3 md:m-4 animate-slide-up2-on-scroll">
             <img class="w-120 h-70 object-cover rounded-3xl md:h-96" src="g4.jpg" alt="">
             <div class="md:ml-10 md:max-w-[500px]">
                 <p class="First Meet text-3xl my-3 md:text-4xl">Engagement</p>
@@ -202,14 +202,14 @@
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-slide-up');
+                entry.target.classList.add('animate-slide-up2');
                 observer.unobserve(entry.target);
             }
         });
     }, { threshold: 0.5 }); 
 
 
-    const elementsToAnimate = document.querySelectorAll('.animate-slide-up-on-scroll');
+    const elementsToAnimate = document.querySelectorAll('.animate-slide-up2-on-scroll');
     elementsToAnimate.forEach(element => {
         observer.observe(element);
     });
