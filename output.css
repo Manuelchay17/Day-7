@@ -2470,6 +2470,11 @@
   .transform-view {
     transform-box: view-box;
   }
+  .target\:absolute {
+    &:target {
+      position: absolute;
+    }
+  }
   .target\:z-0 {
     &:target {
       z-index: 0;

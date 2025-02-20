@@ -2476,6 +2476,11 @@
   .transform-view {
     transform-box: view-box;
   }
+  .target\:absolute {
+    &:target {
+      position: absolute;
+    }
+  }
   .target\:fixed {
     &:target {
       position: fixed;
