@@ -2309,10 +2309,6 @@
   .transition-normal {
     transition-behavior: normal;
   }
-  .duration-1000 {
-    --tw-duration: 1000ms;
-    transition-duration: 1000ms;
-  }
   .ease-in {
     --tw-ease: var(--ease-in);
     transition-timing-function: var(--ease-in);
@@ -2660,22 +2656,26 @@
 @keyframes changeBackground {
   0% {
     background-image: url('foto1.jpg');
+    opacity: 1;
   }
   30% {
     background-image: url('foto2.jpg');
+    opacity: 1;
   }
   70% {
     background-image: url('foto3.jpg');
+    opacity: 1;
   }
   100% {
     background-image: url('foto1.jpg');
+    opacity: 1;
   }
 }
 .animate-bg {
-  animation: changeBackground 20s infinite;
+  animation: changeBackground 15s infinite;
   background-size: cover;
   background-position: center;
-  transition: opacity 1s ease-in-out;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
 }
 .poppins-regular {
   font-family: "Poppins", serif;
@@ -2999,10 +2999,6 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-ease {
   syntax: "*";
   inherits: false;
@@ -3020,6 +3016,10 @@
   inherits: false;
 }
 @property --tw-contain-style {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-duration {
   syntax: "*";
   inherits: false;
 }
