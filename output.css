@@ -2473,11 +2473,6 @@
   .transform-view {
     transform-box: view-box;
   }
-  .target\:fixed {
-    &:target {
-      position: fixed;
-    }
-  }
   .target\:h-0 {
     &:target {
       height: calc(var(--spacing) * 0);
