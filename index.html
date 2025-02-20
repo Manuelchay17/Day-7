@@ -21,7 +21,7 @@
                     <p class="font-paris text-4xl  text-black  md:text-4xl">Reza  & Michele</p>
                     <p class="poppins-regular text-md my-4 font-light  text-black md:text-md">Dear</p>
                     <p class="merriweather-bold text-[17px] font-light text-black md:text-xl">Nama Tamu</p>
-                    <a class="text-white bg-red-500 py-1 px-6 rounded-4xl mt-7" href="#buka-undangan">Buka Undangan</a>
+                    <a id="openInvitationBtn" class="text-white bg-red-500 py-1 px-6 rounded-4xl mt-7" href="#buka-undangan">Buka Undangan</a>
                 </div> 
             </div>      
         </div>
@@ -214,7 +214,17 @@
         observer.observe(element);
     });
 
-    
+
+    const openInvitationBtn = document.getElementById('openInvitationBtn');
+        const bgMusic = document.getElementById('bg-music');
+        
+   
+        openInvitationBtn.addEventListener('click', function(e) {
+            
+            
+            // Putar musik
+            bgMusic.play();
+        });
     
 </script>
 </div>
