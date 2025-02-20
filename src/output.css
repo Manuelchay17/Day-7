@@ -599,6 +599,9 @@
   .isolation-auto {
     isolation: auto;
   }
+  .z-99999999 {
+    z-index: 99999999;
+  }
   .z-auto {
     z-index: auto;
   }
@@ -2476,6 +2479,11 @@
   .target\:fixed {
     &:target {
       position: fixed;
+    }
+  }
+  .target\:z-0 {
+    &:target {
+      z-index: 0;
     }
   }
   .target\:h-0 {
