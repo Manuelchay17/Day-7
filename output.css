@@ -524,98 +524,92 @@
   }
 }
 @layer utilities {
-  .\@container {
-    container-type: inline-size;
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
-  .\@container-\[inline-size\] {
-    container-type: inline-size;
+}
+@keyframes changeBackground {
+  0% {
+    background-image: url('foto1.jpg');
   }
-  .pointer-events-auto {
-    pointer-events: auto;
+  30% {
+    background-image: url('foto2.jpg');
   }
-  .pointer-events-none {
-    pointer-events: none;
+  70% {
+    background-image: url('foto3.jpg');
   }
-  .collapse {
-    visibility: collapse;
+  100% {
+    background-image: url('foto1.jpg');
   }
-  .invisible {
-    visibility: hidden;
+}
+.animate-bg {
+  animation: changeBackground 10s infinite;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+}
+.poppins-regular {
+  font-family: "Poppins", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.merriweather-bold {
+  font-family: "Merriweather", serif;
+  font-style: normal;
+}
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+    opacity: 1;
   }
-  .visible {
-    visibility: visible;
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
   }
-  .sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border-width: 0;
+}
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+.animate-slide-up2 {
+  animation: slide-up2 1s ease-out forwards;
+}
+@keyframes slide-up2 {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
   }
-  .not-sr-only {
-    position: static;
-    width: auto;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  .absolute {
-    position: absolute;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
-  .fixed {
-    position: fixed;
+}
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
   }
-  .relative {
-    position: relative;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
   }
-  .static {
-    position: static;
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
   }
-  .sticky {
-    position: sticky;
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
   }
-  .end-1 {
-    inset-inline-end: calc(var(--spacing) * 1);
-  }
-  .end-2 {
-    inset-inline-end: calc(var(--spacing) * 2);
-  }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
-  .left-0 {
-    left: calc(var(--spacing) * 0);
-  }
-  .isolate {
-    isolation: isolate;
-  }
-  .isolation-auto {
-    isolation: auto;
-  }
-  .z-99999999 {
-    z-index: 99999999;
-  }
-  .z-auto {
-    z-index: auto;
-  }
-  .order-first {
-    order: -9999;
-  }
-  .order-last {
-    order: 9999;
-  }
-  .order-none {
-    order: 0;
-  }
-  .col-auto {
-    grid-column: auto;
+}
+lumn: auto;
   }
   .col-span-full {
     grid-column: 1 / -1;
@@ -901,6 +895,9 @@
   }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
